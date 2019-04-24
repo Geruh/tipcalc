@@ -7,20 +7,23 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Amount"
+            android:layout_width="253dp"
+            android:layout_height="58dp"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editText"
-            app:layout_constraintTop_toTopOf="@+id/calculateTip" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/calculateTip"/>
+            tools:layout_editor_absoluteY="93dp" tools:layout_editor_absoluteX="16dp" android:id="@+id/totalMealCost"/>
     <Button
-            android:text="Calculate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/calculateTip"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="93dp" android:layout_marginEnd="28dp"
-            android:layout_marginRight="28dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:text="Tip"
+            android:layout_width="103dp"
+            android:layout_height="55dp"
+            android:id="@+id/calculateTip" app:layout_constraintStart_toStartOf="@+id/totalMealCost"
+            android:layout_marginLeft="272dp" android:layout_marginStart="272dp" android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tipPercent"/>
+    <Spinner
+            android:layout_width="99dp"
+            android:layout_height="57dp" tools:layout_editor_absoluteY="94dp"
+            android:id="@+id/tipPercent" android:entries="@array/tipPercents"
+            app:layout_constraintStart_toEndOf="@+id/totalMealCost" android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"/>
 </android.support.constraint.ConstraintLayout>
